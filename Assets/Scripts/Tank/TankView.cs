@@ -23,7 +23,7 @@ public class TankView : MonoBehaviour
     {
         Camera cam = Camera.main;
         cam.transform.parent = this.transform;
-        cam.transform.position = new Vector3(0f, 10f, -10f);
+        cam.transform.position = new Vector3(0f, 7f, -14f);
     }
 
     private void Update()
