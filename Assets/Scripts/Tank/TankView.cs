@@ -37,7 +37,7 @@ public class TankView : MonoBehaviour
     {
         if (movementInput != 0) tankController.MoveTank(movementInput);
 
-        if (rotationInput != 0) tankController.RotateTank(rotationInput);
+        if (rotationInput != 0) tankController.RotateTank(rotationInput, movementInput);
 
     }
 

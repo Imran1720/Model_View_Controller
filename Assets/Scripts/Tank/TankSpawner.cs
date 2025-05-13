@@ -7,19 +7,11 @@ public class TankSpawner : MonoBehaviour
 {
     [SerializeField]
     private TankView tankView;
-    [SerializeField]
-    private TankTypes tankToSpawn;
 
     [SerializeField]
     private List<Tanks> tanksList;
 
-
-    void Start()
-    {
-        SpawnTank();
-    }
-
-    private void SpawnTank()
+    public void SpawnTank(TankTypes tankToSpawn)
     {
         TankModel tankModel = new TankModel(tanksList[(int)tankToSpawn]);
 

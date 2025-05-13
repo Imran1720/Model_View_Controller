@@ -8,6 +8,8 @@ public class TankController
 
     private Rigidbody rb;
 
+    private int rotationMultiplier = 1;
+
     public TankController(TankModel _tankModel, TankView _tankView)
     {
         tankModel = _tankModel;
@@ -24,10 +26,11 @@ public class TankController
         rb.velocity = tankView.transform.forward * _movementInput * tankModel.GetTankMoveSpeed();
     }
 
-    public void RotateTank(float _rotationInput)
+    public void RotateTank(float _rotationInput, float _movementVector)
     {
+        rotationMultiplier = _movementVector >= 0 ? 1 : -1;
         Vector3 roatationVector = new Vector3(0f, _rotationInput * tankModel.GetTankRotationSpeed(), 0f);
-        Quaternion deltaRotation = Quaternion.Euler(roatationVector * Time.deltaTime);
+        Quaternion deltaRotation = Quaternion.Euler(roatationVector * Time.deltaTime * rotationMultiplier);
         rb.MoveRotation(rb.rotation * deltaRotation);
 
     }
