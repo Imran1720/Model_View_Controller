@@ -11,6 +11,10 @@ public class TankSpawner : MonoBehaviour
     [SerializeField]
     private List<Tanks> tanksList;
 
+    private void Start()
+    {
+        SpawnTank((TankTypes)PlayerPrefs.GetInt(Config.selectedTank));
+    }
     public void SpawnTank(TankTypes tankToSpawn)
     {
         TankModel tankModel = new TankModel(tanksList[(int)tankToSpawn]);

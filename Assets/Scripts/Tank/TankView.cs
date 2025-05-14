@@ -21,9 +21,9 @@ public class TankView : MonoBehaviour
 
     private void Start()
     {
+        DynamicGI.UpdateEnvironment();
         Camera cam = Camera.main;
-        cam.transform.parent = this.transform;
-        cam.transform.position = new Vector3(0f, 7f, -14f);
+        cam.GetComponentInParent<CameraController>().SetTarget(this.transform);
     }
 
     private void Update()
