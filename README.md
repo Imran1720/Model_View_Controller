@@ -4,6 +4,12 @@ This project is a practical implementation of the **MVC (Model-View-Controller)*
 
 The goal of this project was to deeply understand and apply the MVC architecture in a game development context.
 <br><br><br>
+
+## Gameplay
+
+Click on following image to view gameplay.
+[![Image](https://github.com/user-attachments/assets/cff45e4f-093f-435f-926f-e6ab481cf14c)](https://drive.google.com/file/d/1-SrpXGFHYxHOZi1a_siBFhILdFRZGFXd/view?usp=sharing)
+
 ## 🧠 What I Learned
 
 - ✅ How to apply the **MVC pattern** to game development workflows.
